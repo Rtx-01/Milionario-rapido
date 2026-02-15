@@ -3,75 +3,112 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Milionário Rápido</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<title>Curso Milionário</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: url("fundo.jpg") no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    height:100vh;
+
+    background:url("fundo.png") center/cover no-repeat fixed;
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.75);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* camada escura profissional */
+.overlay{
+    background:rgba(0,0,0,0.65);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
 }
 
-.container {
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
+/* caixa principal */
+.box{
+    animation: aparecer 1.2s ease;
 }
 
-h1 {
-    color: white;
-    margin-bottom: 30px;
-    font-size: 28px;
+/* título */
+h1{
+    font-size:48px;
+    margin-bottom:15px;
 }
 
-.link-btn {
-    display: block;
-    background: linear-gradient(90deg, #00c6ff, #0072ff);
-    color: white;
-    text-decoration: none;
-    padding: 15px;
-    margin: 12px 0;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: 0.3s;
+/* subtitulo */
+p{
+    font-size:20px;
+    opacity:0.9;
 }
 
-.link-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 114, 255, 0.8);
+/* botão */
+.btn{
+    margin-top:30px;
+    display:inline-block;
+    padding:18px 35px;
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    text-decoration:none;
+    border-radius:40px;
+    font-size:18px;
+    font-weight:bold;
+    transition:0.3s;
+    box-shadow:0 0 20px rgba(0,114,255,0.6);
 }
+
+/* efeito hover */
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px rgba(0,114,255,1);
+}
+
+/* animação */
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* celular */
+@media(max-width:700px){
+    h1{
+        font-size:32px;
+    }
+    p{
+        font-size:16px;
+    }
+}
+
 </style>
 </head>
+
 <body>
 
 <div class="overlay">
-    <div class="container">
-        <h1>🔥 Milionário Rápido</h1>
+<div class="box">
 
-        <a href="https://wa.me/5573988138693?text=🔱quero%20adquirir%20meu%20curso%20do%20Milionário%20Rápido🔱" 
-           class="link-btn" 
-           target="_blank">
-            💬 Fale comigo no WhatsApp
-        </a>
+<h1>🔥 Curso Milionário</h1>
 
-    </div>
+<p>
+Aprenda estratégias reais para gerar renda online<br>
+mesmo começando do zero.
+</p>
+
+<a class="btn"
+href="https://wa.me/5573988138693?text=Olá%20quero%20entrar%20no%20Curso%20Milionário"
+target="_blank">
+💬 Fale comigo no WhatsApp
+</a>
+
+</div>
 </div>
 
 </body>
